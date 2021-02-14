@@ -18,7 +18,9 @@ label{
 button{
     padding:0.5rem 0.5rem;
     display:block;
-    margin-top:1rem;
+    margin:1rem 0rem;
+    
+
 }
 
 #output{
@@ -29,4 +31,7 @@ button{
     padding:2rem 2rem;
     display: block;
 
+}
+p{
+    width:35rem;
 }

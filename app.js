@@ -6,8 +6,8 @@ var outputDiv = document.querySelector("#output");
 //or by directly writing in div tag in html
 
 //console.log("clecked");
-
-var serverURL = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+//API read all to get understanding  - https://funtranslations.com/api 
+var serverURL = "https://api.funtranslations.com/translate/minion.json"
 
 
 
@@ -36,14 +36,20 @@ function clickHandler() {
 
     fetch(getTranslationURL(inputText)) //calling server for procesing
         .then(response => response.json())       //may be check this but it is predefined function to convert into json
-        .then(json => console.log(json.contents.translated)) //here json is just paramerter name
-        // see how I got contents.translated by see this console ->network tab of browser
+        .then(json => {
+            
+           outputDiv.innerText=json.contents.translated; 
+            
+         //   console.log(json.contents.translated)) //here json is just paramerter name
+        })
+            // see how I got contents.translated by see this console ->network tab of browser
         //earler when json=>console.log(json) only -> it giving all data
         // after words only getting translation
 
         //error handling if server is down
-        .catch(erroHandler)
+        .catch(errorHandler)
 };
+
 
 btnTranslate.addEventListener("click", clickHandler);
 //here "click" is tellling name of event and then calling function
