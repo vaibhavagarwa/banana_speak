@@ -1,0 +1,50 @@
+<!--
+ 
+//server link to see source code - https://www.youtube.com/redirect?event=live_chat&redir_token=QUFFLUhqa3VXNFBSTjZxMGxxZl9aa0pPM3c4YUc4bTU3Z3xBQ3Jtc0trT25UT3NWQ0ZqQ3p6UWwtcjJvQzZjWXJwRjNTSUV0THE4UFRsWDNfc0hVQWFPN2E3NWFKZjFWa3prUG52Ui1pRFlOc2liX3RDdW1WdkVZTE16MTViVUNMdGxmekY0U25IMlJlSi1sbVpiNi1FMzRVNA&q=https%3A%2F%2Frepl.it%2F%40tanaypratap%2Flessonfourapi
+
+  
+    1. Learned about chacking API working or not thorugh GET Method 
+        by directly google (by default get mathod)
+        by POSTAMAN
+
+    2. Now to learn how to call this API using Javascript by fetch - to catch
+        step 1 - fetch(url)
+        step 2 - .then convert the response into JSON because the respose is coming in JSON
+                you can see in POSTMAN, why beacuse that is done in server
+_____________________________________________________________________________________
+here yoda.json is mock server - 
+
+var url = "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text=i am vaibhav"
+
+fetch(url)
+
+.then(response=>response.json())  //it got response from server/API and now 
+                                    converting it to JSON format
+
+.then(json=>console.log(json))
+run above three command and see on browser console to see output which will be-
+
+Promise (pending) 
+then after some momemt -> success message to see data output
+
+and from all that data we just only need translation not anything else.
+
+_______________________________________________________________________________
+
+Promise - is I am getting is data from server, not know when but don't 
+            stop for me I promise I will give you when I get. 
+            Till then tell me what you want to do with that!
+
+____________________________________________________________________________
+
+Simpler way of writing function without arrow is -
+
+.then (function responseHandler (response) { return response.json()})
+.then (function logJSON(json){console.log(json)})
+
+
+
+
+
+
+-->
