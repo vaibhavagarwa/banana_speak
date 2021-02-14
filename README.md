@@ -1,5 +1,5 @@
 # banana_speak
-I tried to clone the functionality of the Minion translator
+I tried to clone the functionality of the Minion translator - https://funtranslations.com/minion
 
 # Learned
 
